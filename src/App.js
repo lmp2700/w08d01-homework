@@ -3,31 +3,6 @@ import logo from './ga.png';
 import Account from './Account';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      balance: 0,
-      inputBox: ''
-    }
-  }
-  handleDepositClick = (e) => {
-    e.preventDefault();
-    const amount = parseInt((this.inputBox.value), 10)
-    const newBalance = this.state.balance + amount
-      this.setState({
-        balance: newBalance
-      })
-    this.inputBox.value = ''
-  }
-  handleWithdrawClick = (e) => {
-    e.preventDefault();
-    const amount = parseInt((this.inputBox.value), 10)
-    const newBalance = this.state.balance - amount
-          this.setState({
-            balance: newBalance
-          })
-    this.inputBox.value = ''
-  }
   render() {
     return (
       <div id="content">
